@@ -34,7 +34,7 @@ This is a simple Flask web application that generates random passwords based on 
 ### OR
 
 For simple Flask : use command in cmd
-"python app.py"
+- "python app.py"
 
 ## Usage
 
