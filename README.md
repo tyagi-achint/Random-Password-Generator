@@ -13,7 +13,7 @@ This is a simple Flask web application that generates random passwords based on 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/Random-Password-Generator.git
+    git clone https://github.com/tyagi-achint/Random-Password-Generator.git
     cd Random-Password-Generator
     ```
 
@@ -26,7 +26,7 @@ This is a simple Flask web application that generates random passwords based on 
 3. Run the Docker container:
 
     ```bash
-    docker run -it -p 5000:80 password-generator
+    docker run -it -p 5000:5000 password-generator
     ```
 
 4. Access the application in your web browser at [http://localhost:5000](http://localhost:5000).
