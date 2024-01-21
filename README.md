@@ -31,6 +31,11 @@ This is a simple Flask web application that generates random passwords based on 
 
 4. Access the application in your web browser at [http://localhost:5000](http://localhost:5000).
 
+### OR
+
+For simple Flask : use command in cmd
+"python app.py"
+
 ## Usage
 
 - Enter a keyword (optional, 6 characters max).
