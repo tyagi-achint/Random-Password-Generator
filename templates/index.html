@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Password Generator</h1>
+    <form action="/generate_password" method="post">
+        <label for="keyword">Enter a keyword (6 characters max):</label>
+        <input type="text" name="keyword" maxlength="6"><br>
+
+        <label for="length">Enter the total length of your password (min: 8):</label>
+        <input type="number" name="length" required min="8"><br>
+
+        <label for="max_extra_alphabets">Enter the max number of extra alphabets:</label>
+        <input type="number" name="max_extra_alphabets" min="0" max="9"><br>
+
+        <label for="max_extra_numbers">Enter the max number of extra numbers:</label>
+        <input type="number" name="max_extra_numbers" min="0" max="9"><br>
+
+        <label for="max_special_chars">Enter the max number of special characters:</label>
+        <input type="number" name="max_special_chars" min="0" max="9"><br>
+
+        <button type="submit">Generate Password</button>
+    </form>
+
+    {% if password %}
+        <p>Generated Password: {{ password }}</p>
+    {% endif %}
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
