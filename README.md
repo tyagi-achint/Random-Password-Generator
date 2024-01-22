@@ -26,7 +26,7 @@ This is a simple Flask web application that generates random passwords based on 
 3. Run the Docker container:
 
     ```bash
-    docker run -it -p 5000:5000 password-generator
+    docker run  -p 5000:5000 password-generator
     ```
 
 4. Access the application in your web browser at [http://localhost:5000](http://localhost:5000).
